@@ -1,0 +1,18 @@
+#
+# trace12.txt - Forward SIGTSTP to every process in foreground process group
+#
+tsh> tsh> tsh> -e tsh> ./mysplit 4
+Job [2] (16068) Stopped by signal 18
+tsh> [3] (16080) Foreground /bin/echo tsh> jobs
+[2] (16068) Stopped ./mysplit 4 
+tsh> tsh> tsh> tsh> jobs
+tsh> /bin/ps a
+  PID   TT  STAT      TIME COMMAND
+16065 s000  S+     0:00.04 /usr/bin/perl ./sdriver.pl -t trace12.txt -s ./tsh
+16066 s000  Z+     0:00.00 (tsh)
+16082 s000  R      0:00.00 /bin/ps a
+98950 s000  Ss     0:00.19 login -pf dengxinyi
+98952 s000  S      0:00.64 -bash
+  615 s001  Ss     0:00.04 login -pf dengxinyi
+  616 s001  S      0:00.02 -bash
+ 1693 s001  S+     0:00.10 ssh xid220@sunlab.cse.lehigh.edu

@@ -1,0 +1,20 @@
+1,19d0
+< #
+< # trace09.txt - Process bg builtin command
+< #
+< tsh> tsh> [2] (15986) ./myspin 4 &
+< tsh> tsh> tsh> -e tsh> ./myspin 4 \046
+< -e tsh> ./myspin 5
+< Job [4] (15988) Stopped by signal 18
+< tsh> [5] (16000) Foreground /bin/echo tsh> jobs
+< [2] (15986) Running ./myspin 4 &
+< [4] (15988) Stopped ./myspin 5 
+< tsh> tsh> [2] (15986) ./myspin 4 &
+< tsh> tsh> [5] (16000) Foreground /bin/echo tsh> jobs
+< [2] (15986) Running ./myspin 4 &
+< [6] (16001) Foreground /bin/echo tsh> bg %2
+< [4] (15988) Stopped ./myspin 5 
+< [7] (16002) Foreground /bin/echo tsh> jobs
+< tsh> tsh> jobs
+< tsh> bg %2
+< tsh> jobs

@@ -1,0 +1,11 @@
+1,10d0
+< #
+< # trace16.txt - Tests whether the shell can handle SIGTSTP and SIGINT
+< #     signals that come from other processes instead of the terminal.
+< #
+< tsh> tsh> tsh> tsh> ./mystop 2
+< Job [2] (16203) Stopped by signal 18
+< tsh> [3] (16214) Foreground /bin/echo tsh> jobs
+< [2] (16203) Stopped ./mystop 2
+< tsh> tsh> tsh> tsh> jobs
+< tsh> ./myint 2

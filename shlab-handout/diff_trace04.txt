@@ -1,0 +1,3 @@
+4,5d3
+< tsh> tsh> [2] (15878) ./myspin 1 &
+< tsh> -e tsh> ./myspin 1 \046

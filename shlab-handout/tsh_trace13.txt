@@ -1,0 +1,38 @@
+#
+# trace13.txt - Restart every stopped process in process group
+#
+tsh> tsh> tsh> -e tsh> ./mysplit 4
+Job [2] (16091) Stopped by signal 18
+tsh> [3] (16095) Foreground /bin/echo tsh> jobs
+[2] (16091) Stopped ./mysplit 4 
+tsh> tsh> tsh> tsh> %1: No such job
+tsh> tsh> tsh> /bin/ps a
+tsh> jobs
+tsh> fg %1
+tsh> tsh> /bin/ps a
+  PID   TT  STAT      TIME COMMAND
+16088 s000  S+     0:00.03 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tsh
+16089 s000  Z+     0:00.00 (tsh)
+16097 s000  R      0:00.01 /bin/ps a
+16100 s000  R      0:00.00 /bin/ps a
+98950 s000  Ss     0:00.19 login -pf dengxinyi
+98952 s000  S      0:00.65 -bash
+  615 s001  Ss     0:00.04 login -pf dengxinyi
+  616 s001  S      0:00.02 -bash
+ 1693 s001  S+     0:00.10 ssh xid220@sunlab.cse.lehigh.edu
+  PID   TT  STAT      TIME COMMAND
+16088 s000  R+     0:00.03 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tsh
+16089 s000  R+     0:00.01 (tsh)
+16091 s000  T      0:00.00 (mysplit)
+16092 s000  T      0:00.00 (mysplit)
+16095 s000  Z      0:00.00 (echo)
+16096 s000  Z      0:00.00 (echo)
+16097 s000  R      0:00.00 /bin/ps a
+16098 s000  ?      0:00.00 (echo)
+16099 s000  R      0:00.00 (tsh)
+16100 s000  R+     0:00.00 /bin/ps a
+98950 s000  Ss     0:00.19 login -pf dengxinyi
+98952 s000  S      0:00.65 -bash
+  615 s001  Ss     0:00.04 login -pf dengxinyi
+  616 s001  S      0:00.02 -bash
+ 1693 s001  S+     0:00.10 ssh xid220@sunlab.cse.lehigh.edu

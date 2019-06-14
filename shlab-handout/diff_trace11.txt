@@ -1,0 +1,15 @@
+1,14d0
+< #
+< # trace11.txt - Forward SIGINT to every process in foreground process group
+< #
+< tsh> tsh> tsh> -e tsh> ./mysplit 4
+< tsh> tsh> tsh> /bin/ps a
+<   PID   TT  STAT      TIME COMMAND
+< 16039 s000  S+     0:00.05 /usr/bin/perl ./sdriver.pl -t trace11.txt -s ./tsh
+< 16041 s000  Z+     0:00.00 (tsh)
+< 16059 s000  R      0:00.01 /bin/ps a
+< 98950 s000  Ss     0:00.19 login -pf dengxinyi
+< 98952 s000  S      0:00.64 -bash
+<   615 s001  Ss     0:00.04 login -pf dengxinyi
+<   616 s001  S      0:00.02 -bash
+<  1693 s001  S+     0:00.10 ssh xid220@sunlab.cse.lehigh.edu

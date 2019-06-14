@@ -1,0 +1,18 @@
+1,17d0
+< #
+< # trace10.txt - Process fg builtin command. 
+< #
+< tsh> tsh> [2] (16017) ./myspin 4 &
+< tsh> -e tsh> ./myspin 4 \046
+< tsh> %1: No such job
+< tsh> tsh> fg %1
+< tsh> [3] (16027) Foreground /bin/echo tsh> jobs
+< [2] (16017) Running ./myspin 4 &
+< tsh> tsh> %1: No such job
+< tsh> tsh> [3] (16027) Foreground /bin/echo tsh> jobs
+< [2] (16017) Running ./myspin 4 &
+< [4] (16028) Foreground /bin/echo tsh> fg %1
+< [5] (16029) Foreground /bin/echo tsh> jobs
+< tsh> tsh> fg %1
+< tsh> jobs
+< tsh> jobs

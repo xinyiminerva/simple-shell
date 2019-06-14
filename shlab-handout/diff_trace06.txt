@@ -1,0 +1,2 @@
+4d3
+< tsh> tsh> tsh> -e tsh> ./myspin 4

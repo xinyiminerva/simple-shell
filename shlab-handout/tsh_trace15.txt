@@ -1,0 +1,38 @@
+#
+# trace15.txt - Putting it all together
+#
+tsh> tsh> tsh> tsh> ./bogus: Command not found
+tsh> tsh> ./bogus
+tsh> ./myspin 10
+tsh> [6] (16166) ./myspin 3 &
+tsh> tsh> [8] (16168) ./myspin 4 &
+tsh> tsh> [5] (16165) Foreground /bin/echo -e tsh> ./myspin 3 \046
+[6] (16166) Running ./myspin 3 &
+[7] (16167) Foreground /bin/echo -e tsh> ./myspin 4 \046
+[4] (16155) Foreground ./myspin 10
+[8] (16168) Running ./myspin 4 &
+[9] (16169) Foreground /bin/echo tsh> jobs
+tsh> tsh> %1: No such job
+tsh> -e tsh> ./myspin 3 \046
+-e tsh> ./myspin 4 \046
+tsh> jobs
+tsh> fg %1
+Job [4] (16155) terminated by signal 2
+tsh> [9] (16176) Foreground /bin/echo tsh> jobs
+[6] (16166) Running ./myspin 3 &
+[8] (16168) Running ./myspin 4 &
+tsh> tsh> %3: No such job
+tsh> tsh> %1: No such job
+tsh> tsh> [9] (16176) Foreground /bin/echo tsh> jobs
+[6] (16166) Running ./myspin 3 &
+[10] (16177) Foreground /bin/echo tsh> bg %3
+[11] (16178) Foreground /bin/echo tsh> bg %1
+[8] (16168) Running ./myspin 4 &
+[12] (16179) Foreground /bin/echo tsh> jobs
+tsh> tsh> %1: No such job
+tsh> tsh> jobs
+tsh> tsh> jobs
+tsh> bg %1
+tsh> bg %3
+tsh> fg %1
+tsh> quit
